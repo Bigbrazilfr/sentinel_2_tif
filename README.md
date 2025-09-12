@@ -24,7 +24,7 @@ With this package, you will be able to **generate multiple `.tif` images in a si
 Install using pip:
 
 ```bash
-sentinel_2_tif
+pip install sentinel-2-tif
 ```
 
 ---
