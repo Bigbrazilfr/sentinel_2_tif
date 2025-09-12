@@ -7,7 +7,7 @@ name        = "sentinel_2_tif"
 version     = "0.1.1"
 description = "Simplified Sentinel-2 TIF generation and spatial-temporal tools"
 authors = [
-    {name  = "Chase Kusterer", email = "chase.kusterer24@gmail.com"}
+    {name  = "Chase Kusterer"}
 ]
 readme = "README.md"
 license = {text = "MIT"}
