@@ -1,0 +1,42 @@
+# macOS system files
+.DS_Store
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Environment files
+.env
+.venv/
+*.env
+*.venv
+
+# VSCode settings (optional)
+.vscode/
+
+# Compiled files
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Test and coverage reports
+htmlcov/
+coverage.xml
+*.cover
+
+# Collected TIFs (if generated)
+Collected TIFF Files/
+*.tif
+
+# Logs
+*.log
+
+# MyBinder & Jupyter cache
+.ipynb_checkpoints/
+.binder/
+.cache/
