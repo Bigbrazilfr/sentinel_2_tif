@@ -1,7 +1,6 @@
 # sentinel_2_tif
 
 ![PyPI](https://img.shields.io/pypi/v/sentinel_2_tif)
-![Python](https://img.shields.io/pypi/pyversions/sentinel_2_tif)
 ![License](https://img.shields.io/github/license/chase-kusterer/sentinel_2_tif)
 
 `sentinel_2_tif` is a Python package that simplifies the process of generating georeferenced `.tif` images from Sentinel-2 Level-2A satellite data. It offers tools for spatial buffering, time window generation, scene compositing, and automatic `.tif` file creation using Microsoft’s Planetary Computer STAC API.
