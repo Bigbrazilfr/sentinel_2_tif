@@ -21,19 +21,10 @@ With this package, you will be able to **generate multiple `.tif` images in a si
 
 ## Installation
 
-Clone the repo and install in development mode:
+Install using pip:
 
 ```bash
-git clone https://github.com/chase-kusterer/sentinel_2_tif.git
-cd sentinel_2_tif
-pip install -e .
-```
-
-Or create an isolated conda environment:
-
-```bash
-conda env create -f environment.yml
-conda activate sentinel_2_tif
+sentinel_2_tif
 ```
 
 ---
