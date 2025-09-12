@@ -9,8 +9,10 @@ With this package, you will be able to **generate multiple `.tif` images in a si
 ## Features
 
 - Access Sentinel-2 L2A imagery via Planetary Computer
-- Automatically generate bounding box buffers in kilometers
-- Create symmetric time windows around an event date
+- Create minimum bounding rectangles (MBRs) from coordinates, a DataFrame, or a dictionary
+- Generate bounding box buffers in kilometers
+- Create symmetrical time windows around an event date
+- Develop scene search grids with bounding box and time window combinations
 - Composite scenes using `median` or `mean`
 - Save georeferenced `.tif` outputs with full metadata
 - Designed for both notebook and production workflows
