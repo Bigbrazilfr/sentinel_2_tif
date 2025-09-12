@@ -1,0 +1,22 @@
+name: senintel_2_tif
+channels:
+  - defaults
+  - conda-forge
+  - pip
+dependencies:
+  - python>=3.9
+  - pandas
+  - numpy
+  - shapely
+  - rioxarray
+  - rasterio
+  - pystac-client
+  - planetary-computer
+  - odc-stac
+  - tqdm
+  - pyproj
+  - jupyter
+  - pip
+  - pip:
+    - black
+    - pytest

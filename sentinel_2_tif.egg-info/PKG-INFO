@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: sentinel_2_tif
+Version: 0.1.0
+Summary: Simplified Sentinel-2 TIF generation and spatial-temporal tools
+Author-email: Chase Kusterer <chase.kusterer24@gmail.com>
+License: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: shapely
+Requires-Dist: rioxarray
+Requires-Dist: pystac-client
+Requires-Dist: planetary-computer
+Requires-Dist: odc-stac
+Requires-Dist: tqdm
+Requires-Dist: rasterio
+Requires-Dist: pyproj
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
